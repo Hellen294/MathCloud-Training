@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathCloud Tutorial Training</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f7f7f7;
+            overflow: show;
+        }
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        h1 {
+            display: block;
+            background-color: gray;
+            position: 120px;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 24px;
+            margin-center: 20px auto;
+            cursor: pointer;
+            border-radius: 10px;
+            transition-duration: 0.4s;
+            animation: pulse 2s infinite alternate;
+        }
+        .welcome-message {
+            font-size: 24px;
+            animation: slidein 3s infinite alternate;
+        }
+        .logo-container {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo {
+            width: 200px;
+            height: 200px;
+            background: url('logo.png') no-repeat center center;
+            background-size: cover;
+            border-radius: 50%;
+            position: fixed;
+            animation: rotate 10s linear infinite;
+        }
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 20px;
+        }
+        .article {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .article img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .article-content {
+            padding: 20px;
+        }
+        .article h2 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+        .article p {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        h2 {
+            margin-top: 0;
+            text-align: center;
+            font-size: 24px;
+            color: #0072ff;
+            opacity: 0;
+            animation: fadeInOut 4s ease-in-out infinite;
+        }
+
+        h2:nth-of-type(1) { animation-delay: 0s; }
+        h2:nth-of-type(2) { animation-delay: 1s; }
+        h2:nth-of-type(3) { animation-delay: 2s; }
+        h2:nth-of-type(4) { animation-delay: 3s; }
+        h2:nth-of-type(5) { animation-delay: 4s; }
+
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+        p {
+            line-height: 1.6;
+            color: white;
+            text-align: center;
+        }
+
+        .view-button {
+            display: block;
+            background-color: #0072ff;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 20px auto;
+            cursor: pointer;
+            border-radius: 10px;
+            transition-duration: 0.4s;
+        }
+
+        .view-button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+        @media (max-width: 768px) {
+            .news-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.05);
+            }
+        }
+        @keyframes slidein {
+            from {
+                transform: translateY(-20px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(720deg);
+            }
+            100% {
+                transform: rotate(720deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <video class="background-video" autoplay muted loop>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <header>
+        <h1>MathCloud Edu-Tech Training</h1>
+    </header>
+    <p class="welcome-message">Welcome to MathCloud Edu-Tech Training</p>
+    <div class="logo-container">
+        <div class="logo"></div>
+    </div>
+        <p>RC: 564329</p>
+    <div class="container">
+        <div class="news-grid">
+            <article class="article">
+                    <h2>Students Trainings</h2>
+                <img src="https://globaleducation.s3.ap-south-1.amazonaws.com/globaledu/gif/student-training.gif" alt="Students Training">
+                <div class="article-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut odio ac lorem ullamcorper dapibus.</p>
+                    <a href="students-training-content.html" class="view-button">View</a>
+                </div>
+            </article>
+            <article class="article">
+                    <h2>Teachers Trainings</h2>
+                <img src="https://www.stemrobo.com/wp-content/uploads/2023/12/Teachers-Training-and-Learning-2-e1703655796569.png" alt="Teachers Training">
+                <div class="article-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut odio ac lorem ullamcorper dapibus.</p>
+                    <a href="teachers-training-content.html" class="view-button">View</a>
+                </div>
+            </article>
+            <article class="article">
+                    <h2>Administrative Trainings</h2>
+                <img src="https://iticollege.edu/wp-content/uploads/2023/01/Study-Office-Administration.jpg" alt="Administrative Training">
+                <div class="article-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut odio ac lorem ullamcorper dapibus.</p>
+                    <a href="administrative-training-content.html" class="view-button">View</a>
+                </div>
+            </article>
+            <!-- Add more articles as needed -->
+        </div>
+    </div>
+</body>
+</html>
